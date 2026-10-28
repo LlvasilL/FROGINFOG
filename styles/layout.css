@@ -1,14 +1,373 @@
-naw{
-    display:flex;
+html{
+    scroll-behavior: smooth;
+}
+
+* {
     box-sizing: border-box;
-    padding: 0 10px;
-    height: 30px;
+}
+
+body{
+    width: 100%;
+    min-width: 1440px;
+    margin: 0 auto;
+
+    background-image: url('../images/background.svg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: rgba(207, 171, 109, 1);
+}
+
+h1{
+   font-size: 200px;
+   color: rgba(38, 52, 64, 1);
+}
+
+h3{
+   font-size: 24px;
+   color: rgba(207, 175, 109, 1); 
+}
+
+/* навигация */
+nav{
+    width:100%;
+    background-color: rgba(38, 52, 64, 1);
+    padding: 20px 0;
+    
+    position: sticky;
+    top:0;
+    z-index:30;
+}
+
+.nav-container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+.nav-brand,.nav-menu{
+    display: flex;
+    align-items: center;
+}
+
+.nav-brand{
+    gap: 12px;
+}
+
+.nav-menu{
+    gap:32px;
+}
+
+.text-style-nav{
+    font-size: 24px;
+   color: rgba(207, 175, 109, 1); 
+}
+
+.nav-link{
+    position: relative;
+    z-index: 4;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-link:hover{
+    color:rgba(112, 100, 68, 1);
+}
+/* ОСНОВНАЯ ЧАСТЬ */
+.site-content{
+    width: 1440px;
+    margin: 0 auto;    
+}
+/* главный экран */
+.banner{
+    position: relative;
+    height: 720px;
+
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-    .gray{
-    background: none;
-    font-size: 10px;
-    color: grey;
-    }
+    overflow: visible;
+    padding-top: 100px;
+}
+
+.bg-arches{
+    width: 100%;
+    padding: 0 40px;
+    bottom:0;
+}
+
+.sit-frog{
+    position: absolute;
+    z-index:3;
+    top:-20px;
+    left:240px;
+}
+/* меню */
+.menu-section{
+    display: flex;
+    align-items: self-start;
+    transform: rotate(-2deg);
+    padding: 40px;
+}
+/* левое меню */
+.menu-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.gray-card{
+    background-image: url(../images/gray-section.svg);
+    height: 527px;
+    width: 740px;
+    padding: 30px;
+    position: relative;
+    justify-content: space-between;
+}
+.menu-section h2{
+    font-size: 50px;
+    color: rgba(38, 52, 64, 1);
+}
+.menu-section h3{
+    font-size: 24px;
+    color: rgba(38, 52, 64, 1);
+}
+.menu-section p{
+    font-size: 20px;
+    color: rgba(38, 52, 64, 1);
+    font-weight: 600;
+}
+
+.title-container{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 40px 40px 60px;
+    gap:30px;
+}
+/* правое меню */
+.menu-right{
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.menu-section .text-beige{
+    color: rgba(207, 171, 109, 1);
+}
+.blue-card{
+    background-image: url(../images/blue-section.svg);
+    height: 606px;
+    width: 828px;
+    padding: 80px 30px 30px 30px;
+    margin-left: -150px;
+    position: relative;
+    z-index: 2;
+    justify-content: space-between;
+}
+.card-content{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+.menu-text-container{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    width: 300px;
+}
+
+/* СОБЫТИЯ */
+.events-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.church{
+    background-image: url("../images/church.svg");
+    display: flex;
+    flex-direction: column;
+    height: 711px;
+    width: 1240px;
+    margin-top: 40px;
+    padding: 45px 30px 30px 30px;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.events-section h2{
+    font-size: 50px;
+    color: rgba(38, 52, 64, 1);
+}
+.events-section h3{
+    font-size: 24px;
+    color: rgba(38, 52, 64, 1);
+}
+.events-section .right-h3{
+    padding-top: 120px;
+}
+.events-section p{
+    font-size: 20px;
+    color: rgba(38, 52, 64, 1);
+    font-weight: 600;
+    padding-bottom: 120px;
+}
+
+.events-container{
+    display: flex;
+    padding: 120px 175px;
+    gap:50px;
+}
+
+.events-text-container{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    width: 300px;
+}
+.vase1{
+    position: absolute;
+    z-index:3;
+    top:220px;
+    right:300px;
+}
+.sun1{
+    position: absolute;
+    z-index:3;
+    top:190px;
+    right:500px;
+}
+.lie-frog1{
+    position: absolute;
+    z-index:3;
+    top:370px;
+    left:330px;
+}
+.vase2{
+    position: absolute;
+    z-index:3;
+    top:350px;
+    left:510px;
+}
+.sun2{
+    position: absolute;
+    z-index:3;
+    top:500px;
+    right:500px;
+}
+.lie-frog2{
+    position: absolute;
+    z-index:3;
+    top:500px;
+    right:300px;
+}
+
+/* БРОНИРОВАНИЕ */
+.book-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.book-section h2{
+    font-size: 50px;
+    color: rgba(207, 171, 109, 1);
+}
+
+.book-section p{
+    font-size: 20px;
+    color: rgba(207, 171, 109, 1);
+    font-weight: 600;
+    line-height: 40px;
+}
+
+.bg-book{
+    background-image: url(../images/booked-section.svg);
+    width: 1368px;
+    height: 828px;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+    position: relative;
+}
+
+.book-container1{
+    display: flex;
+    justify-content: space-between;
+    padding: 200px 100px 50px 400px;
+}
+.book-text-container1{
+    display: flex;
+    flex-direction: column;
+}
+
+.book-container2{
+    position: absolute;
+    bottom:40px;
+    right: 40px;
+
+}
+
+footer{
+    width:100%;
+    background-color: rgba(38, 52, 64, 1);
+    top:100px;
+    padding: 20px 0;
+    position: relative;
+    overflow: visible;
+}
+footer h3{
+    font-size: 24px;
+    color: rgba(207, 171, 109, 1);
+}
+footer p{
+   font-size: 20px;
+   color: rgba(207, 175, 109, 1);
+   font-weight: 600;
+}
+.footer-container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+
+.footer-text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:390px;
+}
+
+.left-footer-text{
+    text-align: right;
+}
+
+.up-footer-text{
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top:-20%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: rgba(38, 52, 64, 1);
+}
+
+.footer-image{
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(-50%);
+    top:-20%;
 }
